@@ -51,7 +51,6 @@ class Login extends Component {
     } else {
       this.togoE2()
     }
-    // this.getToken('zhanglaichang')
   }
 
   render () {
