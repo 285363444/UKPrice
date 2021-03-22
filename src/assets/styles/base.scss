@@ -1,0 +1,17 @@
+// 使用vw+rem来适配各终端
+@import './variable.scss';
+
+html {
+  font-size: ($vw_fontsize / ($vw_design / $vw_ratio)) * 100vw;
+  @media screen and (max-width: 320px) {
+    font-size: 64px;
+  }
+  @media screen and (min-width: 540px) {
+    font-size: 108px;
+  }
+}
+body {
+  max-width: 540px;
+  min-width: 320px;
+  font-size: 14px;
+}

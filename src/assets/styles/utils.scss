@@ -1,0 +1,31 @@
+// rem转换
+@import './variable.scss';
+
+@function rem($px) {
+  @return ($px / $vw_fontsize) * 1rem;
+}
+
+@mixin border-1px {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    @media (-webkit-min-device-pixel-ratio: 2) {
+      transform: scaleY(0.5);
+    }
+    @media (-webkit-min-device-pixel-ratio: 3) {
+      transform: skewY(0.33333333);
+    }
+  }
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
